@@ -4,12 +4,18 @@ import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet'
 import { flushChunkNames } from 'react-universal-component/server'
 
+import { StaticRouter } from 'react-router'
+import { renderRoutes } from 'react-router-config'
+import routes from '../shared/route'
+
 export default ({ clientStats }) => (req, res) => {
   const lang = 'en'
   const context = {}
 
   const app = renderToString(
-    <div>Wellcome to SSR!!</div>
+    <StaticRouter>
+      {renderRoutes(routes)}
+    </StaticRouter>
   )
 
   const helmet = Helmet.renderStatic()

@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+
+import routes from '../shared/route'
 
 const App = () => (
-  <div>Wellcome to SSR!!</div>
+  <BrowserRouter>
+		{renderRoutes(routes)}
+  </BrowserRouter>
 );
 
 export default hot(module)(App)
