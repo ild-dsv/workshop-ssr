@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ild-dsv/workshop-ssr.git"
+    "url": "git@github.com:ild-dsv/workshop-ssr.git"
   },
   "keywords": [],
   "author": "",
